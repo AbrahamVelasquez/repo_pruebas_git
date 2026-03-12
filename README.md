@@ -118,7 +118,7 @@ git restore "Nombre del archivo"
 
 -> Sirve para añadir el repositorio a GitHub, es decir, de manera remota.
 
-git remote add origin https://github.com/NombreDeUsuario/NombreDelRepositorio
+git remote add origin https://github.com/NombreDeUsuario/NombreDelRepositorio.git
 
 ### Comando para subir cambios a GitHub
 
@@ -139,3 +139,15 @@ Esto último es para subir una nueva rama de local a GitHub
 local.
 
 git pull origin "Nombre de la rama que quieres traer, Ej: master o main"
+
+### Comando para volver a un commit anterior
+
+-> Sirve para poder irte a un versión anterior de tu repositorio.
+Primero debes hacer un git log o git log --online para ver el hash 
+del commit y poder ir a él.
+
+git checkout "hash del commit"
+
+Para esto primero hay que hacer git log o git log --online para ver el hash
+del commit a ir. Lo que ocurre en este caso es de manera "temporal", como 
+si fuera "modo lectura" sin cambiar la historia.
