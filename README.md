@@ -28,7 +28,7 @@ git add .
 
 git commit -m "Nombre del commit que le quiera dar, es el mensaje"
 
-git commit -a -m "mensaje"
+git commit -a -m "Mensaje"
 
 Añade todos los ficheros que ya han sido modificados y que están rastreados
 (tracked). Pero sólo afecta a los ficheros que git ya conocía, entonces,
@@ -50,6 +50,8 @@ El --online sirve para verlos en formato de una línea
 
 git checkout -b "Nombre de la rama"
 
+La -b significa crear una nueva rama
+
 ### Comando para ver las ramas del repositorio
 
 -> Sirve para ver las ramas que hay, y también te dice en cual estás.
@@ -62,11 +64,11 @@ git branch
 
 - Clásica:
 
-git checkout "nombre de la rama existente"
+git checkout "Nombre de la rama existente"
 
 - Moderna:
 
-git switch "nombe de la rama existente"
+git switch "Nombre de la rama existente"
 
 ### Comando para hacer cambios de una rama a otra
 
@@ -75,11 +77,11 @@ En este caso, sólo pondré el merge y no el rebase.
 
 1. Debes ir primero a la rama que quiere que tenga los cambios
 
-git switch/checkout "rama que tendrá los cambios"
+git switch/checkout "Rama que tendrá los cambios"
 
 2. Traer los cambios de la rama que quieras con el merge
 
-git merge "rama que tiene los cambios"
+git merge "Rama que tiene los cambios"
 
 En caso no haber conflictos el merge se hace de manera automática,
 de lo contrario, se deberá resolverlos y hacer después:
@@ -95,7 +97,7 @@ git reset
 
 El contrario de add .
 
-git reset "El nombre del archivo"
+git reset "Nombre del archivo"
 
 El contrario de git add "El nombre del archivo"
 
@@ -106,8 +108,34 @@ Se quitan del unstaging (No deshace el commit). Hay dos formas.
 
 - Clásica: 
 
- git checkout -- "El nombre del archivo"
+ git checkout -- "Nombre del archivo"
 
 - Moderna:
 
-git restore "El nombre del archivo"
+git restore "Nombre del archivo"
+
+### Comando para subir repositorio a GitHub
+
+-> Sirve para añadir el repositorio a GitHub, es decir, de manera remota.
+
+git remote add origin https://github.com/NombreDeUsuario/NombreDelRepositorio
+
+### Comando para subir cambios a GitHub
+
+-> Sirve para que después de hacer cambios de manera local se suban a GitHub.
+
+git push -u origin "Nombre de la rama central Ej: master o main"
+
+La -u significa que se vincule con la rama origen del repositorio en GitHub, 
+depués de ello, sólo habra que user git push o git pull.
+
+git push origin "Nombre de la nueva rama"
+
+Esto último es para subir una nueva rama de local a GitHub
+
+### Comando para traer los cambios del GitHub
+
+-> Sirve para que cuando haga cambios en el Github, los pueda ver de manera
+local.
+
+git pull origin "Nombre de la rama que quieres traer, Ej: master o main"
