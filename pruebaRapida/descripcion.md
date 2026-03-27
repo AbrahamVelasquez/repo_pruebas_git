@@ -1,3 +1,3 @@
 # Descripción.
 
-Este directorio es para hacer pull desde el local al github (segunda_rama)
+Este directorio es para hacer push/pull desde el local al github y viceversa (segunda_rama)
