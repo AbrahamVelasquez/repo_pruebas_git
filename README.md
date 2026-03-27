@@ -5,6 +5,27 @@ con la finalidad de ir aprendiendo más sobre dichas herramientas.
 
 ## Comandos
 
+### Comando para configurar la identidad
+
+-> Sirve para firmar los commits que se hacen y ver quien los hizo. 
+
+```
+git config --global user.name "Tu Nombre"
+
+git config --global user.email "tu@email.com"
+```
+
+### Comando para clonar desde Github
+
+-> Sirve para poder clonar repositorios del Github en local
+
+```
+git clone "URL del repositorio" <Opcional>
+```
+
+> La parte opcional se usa si quiere dar otro nombre a la carpeta
+> que albergará el repositorio.
+
 ### Comando de inicio (Initialize)
 
 -> Sirve para inicializar el repositorio "en memoria".
